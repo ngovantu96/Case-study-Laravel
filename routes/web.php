@@ -4,6 +4,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -91,6 +92,13 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::post('/{id}/edit', [CategoryController::class, 'update'])->name('category.update');
         Route::get('/{id}/delete', [CategoryController::class, 'destroy'])->name('category.delete');
     });
+
+    Route::get('/order',[OrderController::class,'index'])->name('order.index');
+    Route::get('/order-detail/{id}',[OrderController::class,'orderDetail'])->name('order.detail');
+    Route::get('/order-delete/{id}',[OrderController::class,'orderDestroy'])->name('order.delete');
+    Route::get('/order-detail-delete/{id}',[OrderController::class,'orderdetailDestroy'])->name('order.order-detail-delete');
+
+
 
 
 

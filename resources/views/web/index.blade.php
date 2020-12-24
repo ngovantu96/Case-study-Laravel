@@ -69,104 +69,87 @@
         </div>
     </section>
 
-{{--    <section class="container mt-5">--}}
-{{--        <div class="row">--}}
-{{--           <div class="col-6">--}}
-{{--               <h3 class="h3 mt-3">VANG/CHAMPAGNE</h3>--}}
-{{--           </div>--}}
-{{--           <div class="col-6">--}}
-{{--               <a href="{{ route('web.ruou-vang') }}"><h6 class="text-right mt-4">Xem Thêm >></h6></a>--}}
-{{--           </div>--}}
-{{--        </div>--}}
-{{--        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;height: 2px">--}}
-{{--        <div class="row">--}}
-{{--            @foreach($wines as $wine)--}}
-{{--                <div class="col-md-3 col-sm-6">--}}
-{{--                    <div class="product-grid">--}}
-{{--                        <div class="product-image mt-5">--}}
-{{--                            <a href="{{ route('product.detail',$wine->id) }}">--}}
-{{--                                <img class="pic-1" src="{{ asset('storage/'.substr($wine->image,7)) }}">--}}
-{{--                                <img class="pic-2" src="{{ asset('storage/'.substr($wine->image,7)) }}">--}}
-{{--                            </a>--}}
-{{--                            <ul class="social">--}}
-{{--                                <li><a href="{{ route('product.detail',$wine->id) }}" class="fa fa-shopping-bag"></a></li>--}}
-{{--                                <li><a href="{{ route('cart.addToCart',$wine->id) }}" class="fa fa-shopping-cart"></a></li>--}}
-{{--                            </ul>--}}
-{{--                        </div>--}}
-{{--                        <div class="product-content">--}}
-{{--                            <h3 class="title mt-2"><a href="#">{{ $wine->name }}</a></h3>--}}
-{{--                            <ul class="rating">--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                            </ul>--}}
-{{--                            <div class="price">{{ number_format($wine->price) }} đ</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    <section class="container mt-5">
+        <div class="row">
+           <div class="col-6">
+               <h3 class="h3 mt-3">VANG/CHAMPAGNE</h3>
+           </div>
+           <div class="col-6">
+               <a href="{{ route('web.ruou-vang') }}"><h6 class="text-right mt-4">Xem Thêm >></h6></a>
+           </div>
+        </div>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;height: 2px">
+        <div class="row">
+            @foreach($wines as $wine)
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image mt-5">
+                            <a href="{{ route('product.detail',$wine->id) }}">
+                                <img class="pic-1" src="{{ asset('storage/'.substr($wine->image,7)) }}">
+                                <img class="pic-2" src="{{ asset('storage/'.substr($wine->image,7)) }}">
+                            </a>
+                            <ul class="social">
+                                <li><a href="{{ route('product.detail',$wine->id) }}" class="fa fa-shopping-bag"></a></li>
+                                <li><a href="{{ route('cart.addToCart',$wine->id) }}" class="fa fa-shopping-cart"></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title mt-2"><a href="#">{{ $wine->name }}</a></h3>
+                            <ul class="rating">
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                            </ul>
+                            <div class="price">{{ number_format($wine->price) }} đ</div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
 
-{{--    <section class="container mt-5">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-6">--}}
-{{--                <h3 class="h3 mt-3">WHISKY</h3>--}}
-{{--            </div>--}}
-{{--            <div class="col-6">--}}
-{{--                <a href="{{ route('web.whisky') }}"><h6 class="text-right mt-4">Xem Thêm >></h6></a>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;height: 2px">--}}
-{{--        <div class="row">--}}
-{{--            @foreach($whiskys as $whisky)--}}
-{{--                <div class="col-md-3 col-sm-6">--}}
-{{--                    <div class="product-grid">--}}
-{{--                        <div class="product-image mt-5">--}}
-{{--                            <a href="{{ route('product.detail',$whisky->id) }}">--}}
-{{--                                <img class="pic-1" src="{{ asset('storage/'.substr($whisky->image,7)) }}">--}}
-{{--                                <img class="pic-2" src="{{ asset('storage/'.substr($whisky->image,7)) }}">--}}
-{{--                            </a>--}}
-{{--                            <ul class="social">--}}
-{{--                                <li><a href="{{ route('product.detail',$whisky->id) }}" class="fa fa-shopping-bag"></a></li>--}}
-{{--                                <li><a href="{{ route('cart.addToCart',$whisky->id) }}" class="fa fa-shopping-cart"></a></li>--}}
-{{--                            </ul>--}}
-{{--                        </div>--}}
-{{--                        <div class="product-content">--}}
-{{--                            <h3 class="title mt-2"><a href="#">{{ $whisky->name }}</a></h3>--}}
-{{--                            <ul class="rating">--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                                <li class="fa fa-star"></li>--}}
-{{--                            </ul>--}}
-{{--                            <div class="price">{{ number_format($whisky->price) }} đ</div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-{{--        <hr class="mt-5">--}}
-{{--    </section>--}}
-{{--    <section class="container">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-5 bg-success">--}}
-{{--                <h4>kiến thức rượu vang</h4>--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-lg-2 bg-danger">--}}
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="h3 mt-3">WHISKY</h3>
+            </div>
+            <div class="col-6">
+                <a href="{{ route('web.whisky') }}"><h6 class="text-right mt-4">Xem Thêm >></h6></a>
+            </div>
+        </div>
+        <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 100%;height: 2px">
+        <div class="row">
+            @foreach($whiskys as $whisky)
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image mt-5">
+                            <a href="{{ route('product.detail',$whisky->id) }}">
+                                <img class="pic-1" src="{{ asset('storage/'.substr($whisky->image,7)) }}">
+                                <img class="pic-2" src="{{ asset('storage/'.substr($whisky->image,7)) }}">
+                            </a>
+                            <ul class="social">
+                                <li><a href="{{ route('product.detail',$whisky->id) }}" class="fa fa-shopping-bag"></a></li>
+                                <li><a href="{{ route('cart.addToCart',$whisky->id) }}" class="fa fa-shopping-cart"></a></li>
+                            </ul>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title mt-2"><a href="#">{{ $whisky->name }}</a></h3>
+                            <ul class="rating">
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                            </ul>
+                            <div class="price">{{ number_format($whisky->price) }} đ</div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <hr class="mt-5">
+    </section>
 
-{{--                    </div>--}}
-{{--                    <div class="col-lg-2 bg-blue">--}}
-
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="col-5 bg-danger float-right">--}}
-{{--                <h4>Tư vấn dùng rượu</h4>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
 
  @endsection
 
