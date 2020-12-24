@@ -1,0 +1,106 @@
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .navbar{
+        top: 0;
+    }
+    .title{
+        padding-top: 20px;
+        margin-top: 60px;
+        z-index: 1;
+    }
+    .carousel-image {
+        height: 200px;
+    }
+    .nav-item-cart{
+        margin-left: -37px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar{
+        top: 0;
+    }
+    form{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+    form input{
+        font-size: 14px;
+    }
+    .title{
+        padding-top: 50px;
+        margin-top: 80px;
+        z-index: 1;
+    }
+    .carousel-image {
+        height: 150px;
+    }
+    #cart{
+        margin-left: 30%;
+    }
+}
+@media only screen and (max-width: 900px){
+    .navbar{
+        top: 0;
+    }
+    form{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .offcanvas-header{
+        display: block;
+    }
+    .navbar-collapse{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: #440000;
+        color:white;
+        transition: visibility .2s ease-in-out;
+    }
+    .navbar-collapse.show{
+        visibility: visible;
+        transform: translateX(-100%);
+        width: 50%;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .cart{
+        width: 60%;
+        margin: auto;
+    }
+    .carousel-image {
+        height: 200px;
+        margin-top: 57px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .navbar{
+        top: 0;
+    }
+    .nav-link{
+        margin-left: 24px;
+    }
+    .title{
+        padding-top: 50px;
+        margin-top: 150px;
+        z-index: 1;
+    }
+    .carousel-image {
+        height: 300px;
+        margin-top: 57px;
+    }
+}
